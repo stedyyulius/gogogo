@@ -11,7 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func GetDailyStatements(c *gin.Context, db *mongo.Collection) {
+func GetDailyStatements(c *gin.Context, col *mongo.Collection) {
 
 	pipeline := mongo.Pipeline{
 		// $match stage
@@ -211,7 +211,7 @@ func GetDailyStatements(c *gin.Context, db *mongo.Collection) {
 		},
 	}
 	ctx := context.TODO()
-	var data, err = db.Aggregate(ctx, pipeline)
+	var data, err = col.Aggregate(ctx, pipeline)
 
 	if err != nil {
 		log.Fatal(err)
