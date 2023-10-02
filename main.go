@@ -21,7 +21,7 @@ func loadEnv() {
 }
 
 func main() {
-	
+
 	loadEnv()
 
 	uri := os.Getenv("MONGO_URI")
@@ -46,7 +46,7 @@ func main() {
 	}
 
 	fmt.Println("Mongo DB connected to ", uri)
-
+	
 	configs.SetupRoutes(db)
 
 }

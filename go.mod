@@ -4,7 +4,10 @@ go 1.21.1
 
 require github.com/gin-gonic/gin v1.9.1
 
-require github.com/jinzhu/inflection v1.0.0 // indirect
+require (
+	github.com/gin-contrib/pprof v1.4.0 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+)
 
 require (
 	github.com/bytedance/sonic v1.10.1 // indirect
